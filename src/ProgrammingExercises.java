@@ -21,7 +21,7 @@ public class ProgrammingExercises {
         System.out.println("===fizzBuzz===");
         exercises.fizzBuzz();
         System.out.println("===prime Factor===");
-        exercises.primeFactors(1);
+        exercises.primeFactors(15);
     }
 
     private void oneAster() {
@@ -114,8 +114,8 @@ public class ProgrammingExercises {
                 index++;
             }
         }
-        for (int i = 0; i < list.size(); i++) {
-            System.out.println(list.get(i));
+        for (Integer j:list) {
+            System.out.println(j);
         }
         return list;
     }

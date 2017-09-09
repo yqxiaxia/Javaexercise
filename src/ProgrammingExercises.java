@@ -107,11 +107,9 @@ public class ProgrammingExercises {
 
     private ArrayList<Integer> primeFactors(int data) {
         ArrayList<Integer> list = new ArrayList<Integer>();
-        int index = 0;
         for (int i = 2; i < data; i++) {
             if (data % i == 0) {
                 list.add(i);
-                index++;
             }
         }
         for (Integer j:list) {

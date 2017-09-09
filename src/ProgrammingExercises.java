@@ -9,6 +9,10 @@ public class ProgrammingExercises {
         exercises.mutliLineAster(3);
         System.out.println("===triangle Asterisk===");
         exercises.triangle(6);
+        System.out.println("===iso triangle Asterisk===");
+        exercises.isoTriangle(5);
+        System.out.println("===iso triangle invert Asterisk===");
+        exercises.diamondTriangle(5);
     }
 
     private void oneAster(){
@@ -33,4 +37,43 @@ public class ProgrammingExercises {
             oneLineAster(i+1);
         }
     }
+
+    private void isoTriangle(int line){
+        String space = " ";
+        int spaceStart = line -1;
+        for (int i = 0; i < line; i++) {
+            StringBuffer buf = new StringBuffer();
+            for (int j = 0; j < spaceStart; j++) {
+                buf.append(space);
+            }
+            int asterNum = (i+1)*2-1;
+            for (int k = 0; k < asterNum; k++) {
+                buf.append("*");
+            }
+            spaceStart--;
+            System.out.println(buf);
+        }
+    }
+
+    private void isoTriangleInvert(int spaceStart, int line){
+        String space = " ";
+        for (int i = 0; i < line; i++) {
+            StringBuffer buf = new StringBuffer();
+            for (int j = 0; j < spaceStart; j++) {
+                buf.append(space);
+            }
+            int asterNum = (line - i)*2 -1;
+            for (int k = 0; k < asterNum; k++) {
+                buf.append("*");
+            }
+            spaceStart++;
+            System.out.println(buf);
+        }
+    }
+
+    private void diamondTriangle(int line){
+        isoTriangle(line);
+        isoTriangleInvert(1,line-1);
+    }
+
 }

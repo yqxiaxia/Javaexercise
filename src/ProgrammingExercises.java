@@ -13,6 +13,7 @@ public class ProgrammingExercises {
         exercises.isoTriangle(5);
         System.out.println("===iso triangle invert Asterisk===");
         exercises.diamondTriangle(5);
+        System.out.println("haha");
     }
 
     private void oneAster(){
